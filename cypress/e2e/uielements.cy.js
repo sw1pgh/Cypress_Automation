@@ -26,6 +26,9 @@ describe('Check UI Elements', () => {
         cy.get("#monday").check().should('be.checked')
         cy.get("#monday").uncheck().should('not.be.checked')
 
+        cy.get("#friday").check().should('be.checked')
+        cy.get("#friday").uncheck().should('not.be.checked')
+
     })
 
 })
