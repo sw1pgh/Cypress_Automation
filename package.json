@@ -1,0 +1,15 @@
+{
+  "name": "cypress_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Swapnaneel",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cypress": "^1.1.3",
+    "cypress-xpath": "^2.0.1"
+  }
+}
