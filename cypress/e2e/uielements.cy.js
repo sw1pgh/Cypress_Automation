@@ -31,4 +31,28 @@ describe('Check UI Elements', () => {
 
     })
 
+    it('selecting all checkboxes', () => {
+
+        cy.visit("https://itera-qa.azurewebsites.net/home/automation")
+
+        //visibility of all 7 checkboxes
+        cy.get('input.form-check-input[type="checkbox"]').should('be.visible')
+
+        //checking all 7 boxes at once
+        cy.get('input.form-check-input[type="checkbox"]').check().should('be.checked')
+        
+        //unchecking all at once
+        cy.get('input.form-check-input[type="checkbox"]').uncheck().should('not.be.checked')
+    })
+
+    it('selecting first and last checkboxes', () => {
+
+        cy.visit("https://itera-qa.azurewebsites.net/home/automation")
+
+        //checking first and last checkbox
+        cy.get('input.form-check-input[type="checkbox"]').first().check().should('be.checked')
+        cy.get('input.form-check-input[type="checkbox"]').last().check().should('be.checked')
+    
+    })
+
 })
