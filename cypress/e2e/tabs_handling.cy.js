@@ -1,6 +1,6 @@
 describe('Handling/Switching Tabs', () => {
 
-    it.skip('Approach 1', () => {
+    it('Approach 1', () => {
     
         cy.visit('https://the-internet.herokuapp.com/windows')
         cy.get("a[href='/windows/new']").invoke('removeAttr','target').click()

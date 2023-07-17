@@ -21,14 +21,14 @@ describe('Table Handling', () => {
 
     })
 
-    it.skip('Check no. of rows and columns',()=>{
+    it('Check no. of rows and columns',()=>{
 
         cy.get(".table.table-bordered.table-hover>tbody>tr").should('have.length','10')
         cy.get("#form-customer > div.table-responsive > table > thead > tr>td").should('have.length','7')
 
     })
 
-    it.skip('Check cell data from specific row and column',()=>{
+    it('Check cell data from specific row and column',()=>{
 
         //5th row and 3rd column
         cy.get('tbody tr:nth-child(5) td:nth-child(3)').should('contain','xvrt@test.com')
@@ -52,8 +52,9 @@ describe('Table Handling', () => {
 
     it('Pagination',()=>{
 
-        let totalPages
-        //find total number of pages
+        
+       
+       /* //find total number of pages
         cy.get(".col-sm-6.text-end").then((e)=>{
 
             let mytext=e.text()
@@ -61,7 +62,34 @@ describe('Table Handling', () => {
             cy.log("Total no. of Pages: "+totalPages)
             
 
-        })
+        })*/
+
+        let totalPages = 5;
+
+        for(let p=1;p<=totalPages;p++)
+        {
+            if(totalPages>1)
+            {
+                cy.log("Active Page Is = "+p)
+                cy.get("ul[class='pagination']>li:nth-child("+p+")").click()
+                cy.wait(500)
+                cy.get(".table.table-bordered.table-hover>tbody>tr")
+                  .each(($row, index, $rows)=>{
+
+                    cy.wrap($row).within(()=>{
+
+                        cy.get('td:nth-child(3)').then((e)=>{
+
+                            cy.log(e.text()) //Email
+
+                        })
+
+                    })
+
+
+                  })
+            }
+        }
     
     })
 

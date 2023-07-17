@@ -1,7 +1,7 @@
 describe('Alerts', () => {
 
     //JS Alert: It will contain a text and only an 'OK' button        
-    it.skip('JS Alert', () => {
+    it('JS Alert', () => {
     
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
 
@@ -20,7 +20,7 @@ describe('Alerts', () => {
     })
 
     //JS Confirmation Alert: It will contain a text and both 'OK' and 'CANCEL' button
-    it.skip('JS Confirmation Alert', () => {
+    it('JS Confirmation Alert', () => {
     
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
 
@@ -43,7 +43,7 @@ describe('Alerts', () => {
 
 
     //JS Prompt Alert: It will contain a text field and both 'OK' and 'CANCEL' button
-    it.skip('JS Confirmation Alert', () => {
+    it('JS Confirmation Alert', () => {
     
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
 
@@ -71,7 +71,7 @@ describe('Alerts', () => {
 
     })
 
-    it.only('Authenticated Alerts', () => {
+    it('Authenticated Alerts', () => {
     
         // //approach 1
         // cy.visit('https://the-internet.herokuapp.com/basic_auth',{auth: {username: "admin", password: "admin"}})

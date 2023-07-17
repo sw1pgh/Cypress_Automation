@@ -34,3 +34,7 @@ Cypress.Commands.add('getIframe',(iframe)=>{
 })
 
 import 'cypress-iframe';
+
+require('@4tw/cypress-drag-drop')
+
+import 'cypress-file-upload';

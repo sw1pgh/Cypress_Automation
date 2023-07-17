@@ -1,6 +1,6 @@
 describe('iframes', () => {
 
-    it.skip('Approach 1', () => {
+    it('Approach 1', () => {
     
         cy.visit("https://the-internet.herokuapp.com/iframe")
         
@@ -19,7 +19,7 @@ describe('iframes', () => {
 
     })
 
-    it.skip('Approach 2 - By using Custom Command',()=>{
+    it('Approach 2 - By using Custom Command',()=>{
 
         cy.visit("https://the-internet.herokuapp.com/iframe")
       
