@@ -1,0 +1,27 @@
+[ 
+{
+    "email":"swapnaneel.ghosh@geotechinfo.net",
+    "password":"12332839283",
+    "expected":"MEETING ROOM",
+    "fail":"Sign In"
+},
+{
+    "email":"2.x@geotechinfo.net",
+    "password":"oidI^D&S(*DSKPS",
+    "expected":"MEETING ROOM",
+    "fail":"Sign In"
+},
+{
+    "email":"3.x@geotechinfo.net",
+    "password":"hello@123",
+    "expected":"MEETING ROOM",
+    "fail":"Sign In"
+},
+{
+    "email":"swapnaneel.ghosh@geotechinfo.net",
+    "password":"hello@123",
+    "expected":"MEETING ROOM",
+    "fail":"Sign In"
+}
+]
+

@@ -38,3 +38,24 @@ import 'cypress-iframe';
 require('@4tw/cypress-drag-drop')
 
 import 'cypress-file-upload';
+
+//Custom Command to get element simply by label
+Cypress.Commands.add('label',(label)=>{
+    cy.get('a').contains(label).click();
+})
+
+//Overwrite Contains
+/*Cypress.Commands.overwrite('contains',(originalFn, subject, filter, text, options = {})=>{
+
+    if(typeof text === 'object')
+    {
+        options = text
+        text = filter
+        filter = undefined
+    }
+
+    options.matchCase = false
+
+    return originalFn(subject, filter, text, options)
+
+})*/
