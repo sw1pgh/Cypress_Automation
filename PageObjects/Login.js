@@ -24,8 +24,5 @@ class Login
     {
         cy.get('.t-Button-label').click()
     }
-
-
-
 }
 export default Login
