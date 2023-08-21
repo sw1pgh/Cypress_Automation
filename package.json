@@ -17,6 +17,7 @@
     "cypress-xpath": "^2.0.1"
   },
   "dependencies": {
-    "ajv": "^8.12.0"
+    "ajv": "^8.12.0",
+    "xml2js": "^0.6.2"
   }
 }
