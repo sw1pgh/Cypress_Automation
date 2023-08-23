@@ -12,13 +12,15 @@ describe('Headers, Cookies & Auth Tokens',()=>{
             body : {
                 clientName : 'ABC',
                 clientEmail : Math.random().toString(5).substring(2) + "@gmail.com"
+                
             }
+            
         }).then((response)=>{
             authtoken = response.body.accessToken;
 
         })
     })
-
+    cy.log(clientEmail)
 
     before('Creating a New Order',()=>{
         cy.request({
